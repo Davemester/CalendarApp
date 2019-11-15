@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Naptár App by Davemester</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <script src="https://kit.fontawesome.com/9c1222e79d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container main-container">
+            <div class="container eventlist-container" id="eventcontainer">
+                    <div class="row header">
+                            Események listája
+                        </div>
+                        <div class="col" id="eventlist">
+                            
+                        </div>
+             
+                </div>
+        <div class="row" id="row1">
+            <div class="col header" id="monday">H</div>
+            <div class="col header" id="tuesday">K</div>
+            <div class="col header" id="wednesday">Sze</div>
+            <div class="col header" id="thursday">Cs</div>
+            <div class="col header" id="friday">P</div>
+            <div class="col header" id="saturday">Szo</div>
+            <div class="col header" id="sunday">V</div>
+        </div>
+
+        
+        <div class="row" id="row2">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row" id="row3">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row" id="row4">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row" id="row5">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row" id="row6">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday" id="birthday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row" id="row7">
+            <div class="col day-col monday"></div>
+            <div class="col day-col tuesday"></div>
+            <div class="col day-col wednesday"></div>
+            <div class="col day-col thursday"></div>
+            <div class="col day-col friday"></div>
+            <div class="col day-col saturday"></div>
+            <div class="col day-col sunday"></div>
+        </div>
+        <div class="row input-container">
+            <div class="year-input">
+                <input type="text" id="year">
+            </div>
+            <div class="month-input">
+                <select name="Month Selector" id="monthChoose">Hónap
+                <option value='0'>Január</option>
+                <option value="1">Február</option>
+                <option value="2">Március</option>
+                <option value="3">Április</option>
+                <option value="4">Május</option>
+                <option value="5">Június</option>
+                <option value="6">Július</option>
+                <option value="7">Augusztus</option>
+                <option value="8">Szeptember</option>
+                <option value="9">Október</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+            </div>
+            <div class="previous-month">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="next-month">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="add-event" hidden>
+               +
+            </div>
+        </div>
+
+        <div class="new-event-container">
+            <div class="row header">
+                <p>Esemény hozzáadása</p>
+            </div>
+            <div class="row event-name">
+                <div class="col event-name input" >
+                    <input type="text" maxlength="50" id="eventname">
+                </div>
+                <div class="col event-name title">Esemény neve</div>
+            </div>
+            <div class="row event-period">
+                <div class="col event-period input" >
+                    <input type="time" id="eventperiod">
+                </div>
+                <div class="col event-period title">Esemény időpontja</div>
+            </div>
+
+            <div class="row confirm">
+                <div class="col ok-button">
+                    <button id='ok'>OK</button>
+                </div>
+                <div class="col cancel-button">
+                    <button id="cancel">Töröl</button>
+                </div>
+            </div>
+            <div class="row error-message" id="error">
+                Minden mező kitöltése szükséges!
+            </div>
+           
+        </div>
+        <div class="container row actual-date">
+            <div>
+                
+            </div>
+        </div>
+       
+    </div>
+
+   
+   
+    <script src="v5.js"></script>
+</body>
+</html>
