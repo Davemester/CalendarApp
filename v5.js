@@ -608,8 +608,9 @@ class Main {
         let monthSelector = document.querySelector('#monthChoose');
         let yearSelector = document.querySelector('#year');
         let addingEventButton= document.querySelector(".add-event");
-        yearSelector.value='2019';
-        monthSelector.value='9'; 
+        
+        yearSelector.value = new Date().getFullYear().toString();
+        monthSelector.value = new Date().getMonth().toString();
         let calendar= new Calendar();
         calendar.draw(); 
     
